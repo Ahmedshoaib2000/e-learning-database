@@ -1,0 +1,41 @@
+Hello, I need a database structure for an e-learning platform. Here's the overview of what I want:
+
+    Users:
+
+        There should be three types of users: Learners, Instructors, and Admins.
+
+        Each user should have basic information like name, email, password, and country for learners. Instructors should have additional qualifications. Admins should have a role field (such as superadmin, supportadmin, contentadmin).
+
+    Courses:
+
+        Courses will have a name, description, and category.
+
+        Each course will have an instructor (foreign key reference to instructors).
+
+        I also need to store course content such as videos, PDFs, quizzes, and text documents.
+
+    Enrollment:
+
+        Learners should be able to enroll in courses. I need to track progress and the enrollment date.
+
+        A learner should only be able to enroll in the same course once.
+
+    Evaluation:
+
+        For each course, there should be quizzes with questions. Each question will have a correct answer.
+
+        After completing quizzes, learners should be able to submit answers, and we should store whether their answers were correct.
+
+    Feedback:
+
+        Learners should be able to leave feedback on courses with ratings (from 1 to 5).
+
+        The feedback should include comments about the course.
+
+    Certification:
+
+        Upon course completion, learners should receive a certification with the date of acquisition.
+
+    Support:
+
+        Admins should be able to handle support requests from learners. Support tickets should track the admin responses and status (open or resolved).
